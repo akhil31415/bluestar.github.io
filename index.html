@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Star Wines - Price List</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Use the Inter font family */
+        body {
+            font-family: 'Inter', sans-serif;
+            /* "Blue Star" themed background for light mode */
+            background: linear-gradient(to bottom, #e6f7ff, #ffffff);
+            overflow-x: hidden; /* Prevents horizontal scrollbar */
+            color: #1f2937;
+        }
+
+        /* "Blue Star" themed background for dark mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: linear-gradient(to bottom, #0d1a33, #000c1a);
+                color: #f9fafb;
+            }
+            .star {
+                background-color: #a8d8ff; /* Lighter stars for dark mode */
+                box-shadow: 0 0 6px #a8d8ff, 0 0 12px #a8d8ff;
+            }
+        }
+        
+        /* Star styling and animation */
+        .star {
+            position: absolute;
+            background-color: #4a90e2; /* A friendly, vibrant blue */
+            border-radius: 50%;
+            animation: twinkle 5s infinite ease-in-out;
+            box-shadow: 0 0 5px #4a90e2, 0 0 10px #4a90e2;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.4;
+                transform: scale(0.8);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+        }
+        
+        /* Ensure content is above the star background */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .stars-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Animated Star Background Container -->
+    <div class="stars-background"></div>
+
+    <div class="content-wrapper container mx-auto px-4 py-8 sm:py-12">
+        <!-- Header -->
+        <header class="text-center mb-8 sm:mb-12">
+            <h1 class="text-3xl sm:text-5xl font-bold text-gray-800 dark:text-white">Blue Star Wines</h1>
+            <p class="text-gray-600 dark:text-gray-400 mt-2 text-lg">Premium Wine & Spirits</p>
+        </header>
+
+        <main class="max-w-4xl mx-auto space-y-8">
+
+            <!-- CATEGORY: Beers -->
+            <div class="bg-white/70 dark:bg-gray-900/70 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700">
+                <div class="p-4 sm:p-6 bg-gray-50/80 dark:bg-gray-800/60">
+                    <h2 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Beers</h2>
+                </div>
+                <ul class="divide-y divide-gray-200 dark:divide-gray-700">
+                    
+                    <!-- PRODUCT ITEM: Budweiser -->
+                    <li class="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 dark:hover:bg-gray-800/40 transition-colors duration-200">
+                        <div class="flex-grow flex items-center">
+                            <img src="https://logo.clearbit.com/budweiser.com" alt="Budweiser Logo" class="h-10 w-10 object-contain mr-4 rounded-md" onerror="this.onerror=null;this.src='https://placehold.co/40x40/e0e0e0/000000?text=Logo';">
+                            <div>
+                                <p class="font-semibold text-lg text-gray-800 dark:text-gray-100">Budweiser</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">250ml Can</p>
+                            </div>
+                        </div>
+                        <div class="text-lg font-bold text-indigo-600 dark:text-indigo-400 ml-4">
+                            ₹250
+                        </div>
+                    </li>
+
+                    <!-- PRODUCT ITEM: Budweiser Magnum -->
+                    <li class="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 dark:hover:bg-gray-800/40 transition-colors duration-200">
+                        <div class="flex-grow flex items-center">
+                            <img src="https://logo.clearbit.com/budweiser.com" alt="Budweiser Logo" class="h-10 w-10 object-contain mr-4 rounded-md" onerror="this.onerror=null;this.src='https://placehold.co/40x40/e0e0e0/000000?text=Logo';">
+                            <div>
+                                <p class="font-semibold text-lg text-gray-800 dark:text-gray-100">Budweiser Magnum</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">250ml Can</p>
+                            </div>
+                        </div>
+                        <div class="text-lg font-bold text-indigo-600 dark:text-indigo-400 ml-4">
+                            ₹350
+                        </div>
+                    </li>
+
+                    <!-- PRODUCT ITEM: Kingfisher -->
+                    <li class="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 dark:hover:bg-gray-800/40 transition-colors duration-200">
+                        <div class="flex-grow flex items-center">
+                             <img src="https://logo.clearbit.com/unitedbreweries.com" alt="Kingfisher (United Breweries) Logo" class="h-10 w-10 object-contain mr-4" onerror="this.onerror=null;this.src='https://placehold.co/40x40/e0e0e0/000000?text=Logo';">
+                            <div>
+                                <p class="font-semibold text-lg text-gray-800 dark:text-gray-100">Kingfisher Strong</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">500ml Can</p>
+                            </div>
+                        </div>
+                        <div class="text-lg font-bold text-indigo-600 dark:text-indigo-400 ml-4">
+                            ₹180
+                        </div>
+                    </li>
+                    
+                    <!-- PRODUCT ITEM: Heineken -->
+                     <li class="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 dark:hover:bg-gray-800/40 transition-colors duration-200">
+                        <div class="flex-grow flex items-center">
+                            <img src="https://logo.clearbit.com/heineken.com" alt="Heineken Logo" class="h-10 w-10 object-contain mr-4" onerror="this.onerror=null;this.src='https://placehold.co/40x40/e0e0e0/000000?text=Logo';">
+                            <div>
+                                <p class="font-semibold text-lg text-gray-800 dark:text-gray-100">Heineken</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">330ml Bottle</p>
+                            </div>
+                        </div>
+                        <div class="text-lg font-bold text-indigo-600 dark:text-indigo-400 ml-4">
+                            ₹280
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- End of Category Section -->
+
+            <!-- Category Section: Whiskies -->
+            <div class="bg-white/70 dark:bg-gray-900/70 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700">
+                <div class="p-4 sm:p-6 bg-gray-50/80 dark:bg-gray-800/60">
+                    <h2 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Whiskies</h2>
+                </div>
+                <ul class="divide-y divide-gray-200 dark:divide-gray-700">
+
+                    <!-- PRODUCT ITEM: Johnnie Walker -->
+                    <li class="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 dark:hover:bg-gray-800/40 transition-colors duration-200">
+                        <div class="flex-grow flex items-center">
+                             <img src="https://logo.clearbit.com/johnniewalker.com" alt="Johnnie Walker Logo" class="h-10 w-10 object-contain mr-4" onerror="this.onerror=null;this.src='https://placehold.co/40x40/e0e0e0/000000?text=Logo';">
+                            <div>
+                                <p class="font-semibold text-lg text-gray-800 dark:text-gray-100">Johnnie Walker Black Label</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">30ml Peg</p>
+                            </div>
+                        </div>
+                        <div class="text-lg font-bold text-indigo-600 dark:text-indigo-400 ml-4">
+                            ₹450
+                        </div>
+                    </li>
+
+                    <!-- PRODUCT ITEM: Glenfiddich -->
+                    <li class="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 dark:hover:bg-gray-800/40 transition-colors duration-200">
+                        <div class="flex-grow flex items-center">
+                            <img src="https://logo.clearbit.com/glenfiddich.com" alt="Glenfiddich Logo" class="h-10 w-10 object-contain mr-4" onerror="this.onerror=null;this.src='https://placehold.co/40x40/e0e0e0/000000?text=Logo';">
+                            <div>
+                                <p class="font-semibold text-lg text-gray-800 dark:text-gray-100">Glenfiddich 12</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">30ml Peg</p>
+                            </div>
+                        </div>
+                        <div class="text-lg font-bold text-indigo-600 dark:text-indigo-400 ml-4">
+                            ₹600
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- End of Category Section -->
+
+        </main>
+
+        <footer class="text-center mt-12 pt-8 border-t border-gray-300 dark:border-gray-700">
+            <div class="text-gray-700 dark:text-gray-300 space-y-2">
+                <!-- CONTACT INFO: Replace with your details -->
+                <div class="flex items-center justify-center space-x-2">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.518.76a11.024 11.024 0 006.29 6.29l.76-1.518a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                    </svg>
+                    <span>+91 98765 43210</span>
+                </div>
+                <div class="flex items-center justify-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                    </svg>
+                    <span>123 Wine Street, Mumbai, Maharashtra, India</span>
+                </div>
+            </div>
+            <p class="text-sm text-gray-500 dark:text-gray-500 mt-6">Last updated: July 18, 2024</p>
+        </footer>
+
+    </div>
+    
+    <script>
+        // This script generates the animated stars in the background.
+        document.addEventListener('DOMContentLoaded', function() {
+            const starsContainer = document.querySelector('.stars-background');
+            const numStars = 75; // You can adjust the number of stars
+
+            for (let i = 0; i < numStars; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                const size = Math.random() * 3 + 1; // Star size between 1px and 4px
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.animationDelay = `${Math.random() * 5}s`;
+                star.style.animationDuration = `${Math.random() * 3 + 3}s`; // Duration from 3s to 6s
+                starsContainer.appendChild(star);
+            }
+        });
+    </script>
+
+</body>
+</html>
